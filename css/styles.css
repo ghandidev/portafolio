@@ -189,7 +189,7 @@ body {
 }
 .card__image {
   position: relative;
-  background-color: var(--color-red);
+  background-color: var(--color-white);
   padding-top: 1.5rem;
   margin-bottom: -0.75rem;
 }

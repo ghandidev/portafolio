@@ -4,154 +4,183 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Ghandi Aboultaif">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Aboultaif Ghandi | Meu Portfolio</title>
+    <meta name="author" content="Ghandi Aboultaif" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>GhandiDev | Meu Portfolio</title>
     <link
-    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-    rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
     />
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
+    <header>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#welcome-section">Welcome</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
     <main class="main-container">
-      <header>
-        <nav class="nav-bar">
-          <ul>
-            <li><a href="#welcome-section">Welcome</a></li>
-            <li><a href="#service">Service</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-
       <section id="welcome-section">
-        <div class="img-container">
-          <img class="img"src="/assets/background851x315.png" alt="background of section">
-        </div>
+        <img
+          class="img"
+          src="/assets/background851x315.png"
+          alt="background of section"
+        />
         <div class="text-container">
           <h1 class="wlc-text1">Hello, I'm Ghandi Aboultaif</h1>
           <h2 class="wlc-text2">developer web designer</h2>
         </div>
       </section>
-
-      <section id="service">
-          <div class="wrapper">
-            <p class="txt-static">Best Service</p>
-            <div class="txts-dinamic">
-              <span class="txt-dinamic">Designer</span>
-              <span class="txt-dinamic">Develop</span>
-              <span class="txt-dinamic">Freelance</span>
-              <span class="txt-dinamic">Quality</span>
-              <span class="txt-dinamic">Designer</span>
-            </div>
+      <section id="service" class="box__dinamic">
+        <div class="box__wrapper">
+          <p class="word__static">Best Service</p>
+          <div class="words__dinamic">
+            <span class="word__dinamic">Designer</span>
+            <span class="word__dinamic">Develop</span>
+            <span class="word__dinamic">Freelance</span>
+            <span class="word__dinamic">Quality</span>
+            <span class="word__dinamic">Designer</span>
           </div>
+        </div>
       </section>
 
       <section id="projects" class="container">
-
         <div class="card__container swiper">
           <div class="card__content">
-              <div class="swiper-wrapper">
-                <article class="card__article swiper-slide">
-                  <div class="card__image">
-                    <img src="/assets/img/authorpage-shot.png" alt="Image Web Author Page" class="card__img">
-                    <div class="card__shadow"></div>
-                  </div>
+            <div class="swiper-wrapper">
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img
+                    src="/assets/img/authorpage-shot.png"
+                    alt="Image Web Author Page"
+                    class="card__img"
+                  />
+                </div>
+                <div class="card__data">
+                  <h2 class="card__name">Author Page</h2>
+                  <p class="card__description">Search Users info</p>
 
-                  <div class="card__data">
-                    <h2 class="card__name">Author Page</h2>
-                    <p class="card__description">Search Users info</p>
-  
-                    <a href="https://authorpageghandidev.netlify.app/" target="_blank" class="card__button">Visit</a>
-                  </div>
-                </article>
+                  <a
+                    href="https://authorpageghandidev.netlify.app/"
+                    target="_blank"
+                    class="card__button"
+                    >Visit</a
+                  >
+                </div>
+              </article>
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img
+                    src="/assets/img/pokemonapp-shot.png"
+                    alt="Web Author Page"
+                    class="card__img"
+                  />
+                </div>
+                <div class="card__data">
+                  <h2 class="card__name">Pokemon App</h2>
+                  <p class="card__description">Search a pokemon</p>
+                  <a
+                    href="https://pokemonghandidev.netlify.app/"
+                    target="_blank"
+                    class="card__button"
+                    >Visit</a
+                  >
+                </div>
+              </article>
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img
+                    src="/assets/img/rockpaperscissor-shot.png"
+                    alt="Web Author Page"
+                    class="card__img"
+                  />
+                </div>
+                <div class="card__data">
+                  <h2 class="card__name">Rock Paper Scissor</h2>
+                  <p class="card__description">Enjoy playing</p>
+                  <a
+                    href="https://rock-paper-scissors-ghandidev.netlify.app"
+                    target="_blank"
+                    class="card__button"
+                    >Visit</a
+                  >
+                </div>
+              </article>
+              <article class="card__article swiper-slide">
+                <div class="card__image">
+                  <img
+                    src="/assets/img/cashregister-shot.png"
+                    alt="Web Author Page"
+                    class="card__img"
+                  />
+                </div>
 
-                <article class="card__article swiper-slide">
-                  <div class="card__image">
-                    <img src="/assets/img/pokemonapp-shot.png" alt="Web Author Page" class="card__img">
-                    <div class="card__shadow"></div>
-                  </div>
-
-                  <div class="card__data">
-                    <h2 class="card__name">Pokemon App</h2>
-                    <p class="card__description">Search a pokemon</p>
-                    <a href="https://pokemonghandidev.netlify.app/" target="_blank" class="card__button">Visit</a>
-                  </div>
-                </article>
-
-                <article class="card__article swiper-slide">
-                  <div class="card__image">
-                    <img src="/assets/img/rockpaperscissor-shot.png" alt="Web Author Page" class="card__img">
-                    <div class="card__shadow"></div>
-                  </div>
-
-                  <div class="card__data">
-                    <h2 class="card__name">Rock Paper Scissor Game</h2>
-                    <p class="card__description">Enjoy playing</p>
-                    <a href="https://rock-paper-scissors-ghandidev.netlify.app" target="_blank" class="card__button">Visit</a>
-                  </div>
-                </article>
-
-                <article class="card__article swiper-slide">
-                  <div class="card__image">
-                    <img src="/assets/img/cashregister-shot.png" alt="Web Author Page" class="card__img">
-                    <div class="card__shadow"></div>
-                  </div>
-
-                  <div class="card__data">
-                    <h2 class="card__name">Cash Register</h2>
-                    <p class="card__description">Calculate the total</p>
-                    <a href="https://cashregisterghandidev.netlify.app" target="_blank" class="card__button">Visit</a>
-                  </div>
-                </article>
-              </div>
-
+                <div class="card__data">
+                  <h2 class="card__name">Cash Register</h2>
+                  <p class="card__description">Calculate the total</p>
+                  <a
+                    href="https://cashregisterghandidev.netlify.app"
+                    target="_blank"
+                    class="card__button"
+                    >Visit</a
+                  >
+                </div>
+              </article>
             </div>
-            <div class="swiper-button-next">
-              <box-icon name='chevron-right' ></box-icon>
-            </div>
-            <div class="swiper-button-prev">
-              <box-icon name='chevron-left'></box-icon>
-            </div>
-            <div class="swiper-pagination swiper-pagination-bullet"></div>   
           </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination swiper-pagination-bullet"></div>
+        </div>
       </section>
 
       <section id="contact">
-        <a href="https://wa.me/584123974500/?text=I'm%20need%20more%20information" target="_blank">
-          <i class='bx bxl-whatsapp'></i>
+        <a
+          id="profile-link"
+          href="https://github.com/ghandidev"
+          target="_blank"
+        >
+          <i class="bx bxl-github"></i>
         </a>
-        <a id="profile-link" href="https://github.com/ghandidev" target="_blank"
-          ><i class="bx bxl-github"></i>
+        <a href="https://www.facebook.com/aboultaifghandi" target="_blank">
+          <i class="bx bxl-meta"></i>
         </a>
-        <a href="https://www.facebook.com/aboultaifghandi" target="_blank"
-          ><i class="bx bxl-meta"></i
-        ></a>
-        <a href="https://twitter.com/AboultaifG" target="_blank"
-        ><i class='bx bxl-twitter'></i></a>
-        
+        <a href="https://twitter.com/AboultaifG" target="_blank">
+          <i class="bx bxl-twitter"></i>
+        </a>
         <a href="https://www.instagram.com/aboultaifghandi/" target="_blank">
-          <i class='bx bxl-instagram'></i></i
-        ></a>
-        <a href="https://t.me/Ghandi88" target="_blank"><i class='bx bxl-telegram'></i></a>
-
-        <a href="https://www.linkedin.com/in/ghandi-aboultaif-a02b47179/" target="_blank">
-          <i class='bx bxl-linkedin-square bx-tada' ></i>
+          <i class="bx bxl-instagram"></i>
         </a>
-              
+        <a
+          href="https://www.linkedin.com/in/ghandi-aboultaif-a02b47179/"
+          target="_blank"
+        >
+          <i class="bx bxl-linkedin-square"></i>
+        </a>
+        <a
+          href="https://wa.me/584123974500/?text=I'm%20need%20more%20information"
+          target="_blank"
+        >
+          <i class="bx bxl-whatsapp bx-tada"></i>
+        </a>
+        <a href="https://t.me/Ghandi88" target="_blank">
+          <i class="bx bxl-telegram"></i>
+        </a>
       </section>
       <div class="footer">
-        <a href="#"><i class='bx bx-copyright'></i><span> Copyright 2023</span></a>
-    </div>  
-        
+        <a class="copy" href="#">
+          <i class="bx bx-copyright"></i>
+          <span> Copyright 2023</span>
+        </a>
+      </div>
     </main>
-    <!-- Swiper JS -->
-    <script src="/js/swiper-bundle.min.js"></script> 
-    <!-- JavaScript -->
+    <script src="/js/swiper-bundle.min.js"></script>
     <script src="/js/script.js"></script>
   </body>
 </html>

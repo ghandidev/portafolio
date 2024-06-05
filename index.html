@@ -7,6 +7,12 @@
     <meta name="author" content="Ghandi Aboultaif" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>GhandiDev | Meu Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -15,42 +21,123 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <header>
-      <nav class="nav-bar">
+    <header class="nav-bar">
+      <nav>
         <ul>
-          <li><a href="#welcome-section">Welcome</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="logo">
+            <a href="#">
+              <img src="/assets/logo.svg" width="32" alt="logo" />
+            </a>
+          </li>
         </ul>
       </nav>
-    </header>
-    <main class="main-container">
-      <section id="welcome-section">
-        <img
-          class="img"
-          src="/assets/background851x315.png"
-          alt="background of section"
-        />
-        <div class="text-container">
-          <h1 class="wlc-text1">Hello, I'm Ghandi Aboultaif</h1>
-          <h2 class="wlc-text2">developer web designer</h2>
-        </div>
-      </section>
-      <section id="service" class="box__dinamic">
-        <div class="box__wrapper">
-          <p class="word__static">Best Service</p>
-          <div class="words__dinamic">
-            <span class="word__dinamic">Designer</span>
-            <span class="word__dinamic">Develop</span>
-            <span class="word__dinamic">Freelance</span>
-            <span class="word__dinamic">Quality</span>
-            <span class="word__dinamic">Designer</span>
-          </div>
-        </div>
-      </section>
+      <nav>
+        <ul>
+          <li>
+            <a href="#$home">Home</a>
+          </li>
+          <li>
+            <a href="#$projects">Projects</a>
+          </li>
+          <li>
+            <a href="#$service">Service</a>
+          </li>
+          <li>
+            <a href="#$contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="page">
+        <ul>
+          <li>
+            <form class="color-picker" action="">
+              <fieldset>
+                <legend class="visually-hidden">Pick a Color Scheme</legend>
 
-      <section id="projects" class="container">
+                <label for="light" class="visually-hidden">Light</label>
+                <input type="radio" name="theme" id="light" checked />
+
+                <label for="dark" class="visually-hidden">Dark</label>
+                <input type="radio" name="theme" id="dark" />
+
+                <label for="blue" class="visually-hidden">Blue</label>
+                <input type="radio" name="theme" id="blue" />
+
+                <label for="pink" class="visually-hidden">Pink</label>
+                <input type="radio" name="theme" id="pink" />
+
+                <label for="green" class="visually-hidden">Green</label>
+                <input type="radio" name="theme" id="green" />
+              </fieldset>
+            </form>
+          </li>
+        </ul>
+      </nav>
+      <nav class="lang">
+        <ul id="flags">
+          <li>
+            <div class="flags__item">
+              <img
+                src="/assets/flags/en.svg"
+                alt="England flag"
+                data-language="en"
+              />
+            </div>
+          </li>
+          <li>
+            <div class="flags__item">
+              <img
+                src="/assets/flags/es.svg"
+                alt="Spain flag"
+                data-language="es"
+              />
+            </div>
+          </li>
+          <li>
+            <div class="flags__item">
+              <img
+                src="/assets/flags/br.svg"
+                alt="Brazilian flag"
+                data-language="br"
+              />
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div id="menu-backdrop" class="backdrop"></div>
+    </header>
+    <main class="main__container">
+      <section id="$home" class="home">
+        <div class="text-container">
+          <h1 class="name" data-section="profile" data-value="name">
+            Hello, I'm Ghandi Aboultaif
+          </h1>
+          <h2 class="rol" data-section="profile" data-value="rol">
+            developer web designer
+          </h2>
+        </div>
+        <div class="text-content">
+          <p
+            class="description"
+            data-section="profile"
+            data-value="description"
+          >
+            From a young age, I fell in love with technology and felt the need
+            to satisfy my curiosity. Passionate about code and algorithms, I
+            decided to embark on the path of studying Computer Science. With
+            great effort and dedication, I was able to acquire the necessary
+            knowledge to perform in the field of Front End.
+          </p>
+        </div>
+        <div class="image-author">
+          <img
+            class="img"
+            src="/assets/background851x315.png"
+            alt="background of section"
+          />
+        </div>
+      </section>
+      <section id="$projects" class="container">
         <div class="card__container swiper">
           <div class="card__content">
             <div class="swiper-wrapper">
@@ -159,8 +246,19 @@
           <div class="swiper-pagination swiper-pagination-bullet"></div>
         </div>
       </section>
-
-      <section id="contact">
+      <section id="$service" class="box__dinamic">
+        <div class="box__wrapper">
+          <p class="word__static">Best Service</p>
+          <div class="words__dinamic">
+            <span class="word__dinamic">Designer</span>
+            <span class="word__dinamic">Develop</span>
+            <span class="word__dinamic">Freelance</span>
+            <span class="word__dinamic">Quality</span>
+            <span class="word__dinamic">Designer</span>
+          </div>
+        </div>
+      </section>
+      <section id="$contact" class="contact">
         <a
           id="profile-link"
           href="https://github.com/ghandidev"
@@ -194,7 +292,7 @@
         </a>
       </section>
       <div class="footer">
-        <a class="copy" href="#">
+        <a class="copy-icon" href="#">
           <i class="bx bx-copyright"></i>
           <span> Copyright 2023</span>
         </a>

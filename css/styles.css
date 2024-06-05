@@ -6,8 +6,8 @@
 }
 /* light theme */
 :root:has(#light:checked) {
-  --color-body-bg: hsl(0, 0%, 76%);
-  --shadow-box: 0 20px 25px rgba(0, 0, 0, 0.2);
+  --color-body-bg: hsl(0, 3%, 92%);
+  --shadow-box: 16px 16px 25px 5px rgba(0, 0, 0, 0.4);
   --color-backdrop: hsl(0, 0%, 65%);
   --color-card-bg: hsl(23, 87%, 38%);
   --color-secondary: hsl(2, 92%, 31%);
@@ -16,41 +16,41 @@
 }
 /* dark theme */
 :root:has(#dark:checked) {
-  --color-body-bg: hsl(0, 0%, 20%);
-  --shadow-box: 0 20px 25px rgba(255, 255, 255, 0.2);
+  --color-body-bg: rgb(41, 41, 41);
+  --shadow-box: 16px 16px 15px 5px rgba(255, 255, 255, 0.3);
   --color-backdrop: hsl(0, 0%, 42%);
   --color-card-bg: hsl(23, 87%, 38%);
-  --color-secondary: hsl(0, 0%, 28%);
-  --color-primary-text: hsl(0, 0%, 26%);
-  --color-second-text: hsl(0, 0%, 77%);
+  --color-secondary: hsl(2, 92%, 31%);
+  --color-primary-text: hsl(0, 0%, 100%);
+  --color-second-text: hsl(0, 0%, 85%);
 }
 /* blue theme */
 :root:has(#blue:checked) {
-  --color-body-bg: hsl(239, 80%, 24%);
-  --shadow-box: 0 20px 25px rgba(179, 179, 235, 0.2);
+  --color-body-bg: hsl(222.06deg 19.51% 60.81%);
+  --shadow-box: 16px 16px 25px 5px rgba(255, 255, 255, 0.4);
   --color-backdrop: rgba(29, 37, 110, 0.432);
   --color-card-bg: hsl(23, 87%, 38%);
-  --color-secondary: hsl(0, 0%, 28%);
-  --color-primary-text: hsl(0, 0%, 17%);
+  --color-secondary: hsl(2, 92%, 31%);
+  --color-primary-text: hsl(0, 0%, 100%);
   --color-second-text: hsl(0, 0%, 100%);
 }
 /* pink theme */
 :root:has(#pink:checked) {
-  --color-body-bg: hsl(319, 88%, 90%);
-  --shadow-box: 0 20px 25px rgba(236, 41, 162, 0.2);
+  --color-body-bg: hsl(319deg 21.44% 68.87%);
+  --shadow-box: 16px 16px 25px 5px rgba(236, 41, 162, 0.2);
   --color-backdrop: rgba(255, 0, 157, 0.2);
   --color-card-bg: hsl(23, 87%, 38%);
-  --color-secondary: hsl(0, 0%, 28%);
+  --color-secondary: hsl(2, 92%, 31%);
   --color-primary-text: hsl(0, 0%, 100%);
   --color-second-text: hsl(0, 0%, 15%);
 }
 /* green theme */
 :root:has(#green:checked) {
   --color-body-bg: hsl(104, 18%, 79%);
-  --shadow-box: 0 20px 25px rgba(131, 212, 25, 0.2);
+  --shadow-box: 16px 16px 25px 5px rgba(131, 212, 25, 0.2);
   --color-backdrop: rgba(41, 122, 41, 0.2);
   --color-card-bg: hsl(23, 87%, 38%);
-  --color-secondary: hsl(0, 0%, 28%);
+  --color-secondary: hsl(2, 92%, 31%);
   --color-primary-text: hsl(0, 0%, 100%);
   --color-second-text: hsl(0, 0%, 15%);
 }
@@ -61,21 +61,96 @@
   font-family: var(--font);
 }
 body {
-  height: 100vh;
   background-color: var(--color-body-bg);
-  color: var(--color-second-text);
 }
 .nav-bar {
   position: fixed;
   display: flex;
-  width: 100%;
   margin: 0 auto;
+  flex-wrap: wrap;
+  width: 100%;
   background: var(--nav-color);
-  box-shadow: var(--shadow-box);
   color: var(--nav-text);
   justify-content: space-evenly;
   align-items: center;
   z-index: 10;
+}
+.nav-bar ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav-bar ul li {
+  list-style: none;
+  letter-spacing: 2px;
+  padding: 0.5rem;
+  font-size: 12px;
+}
+.nav-bar a {
+  color: currentColor;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.logo {
+  display: none;
+  width: 32px;
+  height: 32px;
+}
+.color-picker > fieldset {
+  border: 0;
+  display: flex;
+  gap: 1.5rem;
+  width: fit-content;
+  padding: 0 1.5rem;
+}
+.color-picker input[type='radio'] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  outline: 3px solid var(--radio-color, currentColor);
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+.color-picker input[type='radio']:checked {
+  background-color: var(--radio-color);
+}
+.color-picker input[type='radio']#light {
+  --radio-color: grey;
+  cursor: pointer;
+}
+.color-picker input[type='radio']#dark {
+  --radio-color: black;
+  cursor: pointer;
+}
+.color-picker input[type='radio']#blue {
+  --radio-color: blue;
+  cursor: pointer;
+}
+.color-picker input[type='radio']#pink {
+  --radio-color: pink;
+  cursor: pointer;
+}
+.color-picker input[type='radio']#green {
+  --radio-color: green;
+  cursor: pointer;
+}
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.flags__item {
+  cursor: pointer;
+}
+.flags__item > img {
+  border-radius: 25% 10px 25px;
 }
 .backdrop {
   position: absolute;
@@ -90,40 +165,14 @@ body {
   animation-delay: 0.5s;
   opacity: 1;
   z-index: -10;
+  display: none;
 }
-.logo {
-  display: flex;
-  width: 32px;
-  height: 32px;
-}
-.nav-bar ul {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0 0.5rem;
-}
-.nav-bar ul li {
-  list-style: none;
-  letter-spacing: 2px;
-  padding: 0.5rem;
-  font-size: 14px;
-}
-.nav-bar a {
-  color: currentColor;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-}
-
 .main__container {
   display: flex;
   flex-direction: column;
   position: absolute;
   width: 100%;
 }
-
 .home {
   display: flex;
   position: relative;
@@ -133,126 +182,67 @@ body {
   width: 100%;
   height: 100vh;
 }
+.text-container {
+  box-sizing: content-box;
+  position: relative;
+}
+.text-content {
+  position: absolute;
+  bottom: 0.5rem;
+}
 .name,
 .rol {
   background-color: var(--color-card-bg);
   border-radius: 0.7rem;
-  padding: 0.6rem 1.4rem;
+  padding: 0.3rem 1rem;
   color: var(--color-primary-text);
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   margin: 1rem;
 }
 .rol {
   color: var(--color-second-text);
-  margin-bottom: 3rem;
+  margin-bottom: 0.5rem;
 }
 .description {
-  width: 600px;
   color: var(--color-second-text);
-  font-size: 1.5rem;
-  align-content: center;
+  font-size: 1rem;
   text-align: center;
   background: var(--color-backdrop);
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 5px;
 }
-.box__dinamic {
-  display: grid;
-  height: 100vh;
-  width: 100%;
-  place-items: center;
-}
-.box__wrapper {
-  box-sizing: content-box;
-  flex-direction: column;
-  height: 5.7rem;
-  display: flex;
-  align-items: center;
-  padding: 50px 30px;
-  font-size: 2.5rem;
-  box-shadow: var(--shadow-box);
-  border-radius: 10px;
-  transition: 0.3s;
-}
-.word__static {
-  color: var(--color-second-text);
-  font-weight: 300;
-}
-.words__dinamic {
-  overflow: hidden;
-}
-.word__dinamic {
-  display: block;
-  padding-left: 15px;
-  color: var(--color-secondary);
-  animation: slide 6s infinite;
-}
-@keyframes slide {
-  10% {
-    transform: translateY(-112%);
-  }
-  25% {
-    transform: translateY(-100%);
-  }
-  35% {
-    transform: translateY(-212%);
-  }
-  50% {
-    transform: translateY(-200%);
-  }
-  60% {
-    transform: translateY(-312%);
-  }
-  75% {
-    transform: translateY(-300%);
-  }
-  85% {
-    transform: translateY(-412%);
-  }
-  100% {
-    transform: translateY(-400%);
-  }
-}
-
-/* .word__dinamic::after {
-  content: '';
+.image-author {
   position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: var(--color-bg);
-  border-left: 2px solid var(--color-red);
-  animation: typing 1.5s steps(9) infinite;
+  top: 6rem;
+  opacity: 0.3;
+  z-index: -10;
 }
-
-@keyframes typing {
-  100% {
-    left: 100%;
-    margin: 0 -35px 0 35px;
-  }
-} */
+.image-author > .img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
 
 .container {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-
 .card__container {
   max-width: 1080px;
   width: 100%;
-  padding-block: 3rem;
+  padding-block: 2rem;
 }
 .card__content {
-  margin-inline: 1.75rem;
+  margin-inline: 0;
+  height: auto;
   border-top-left-radius: 2.25rem;
   border-top-right-radius: 2.25rem;
-  border-bottom-left-radius: 6.25rem;
-  border-bottom-right-radius: 6.25rem;
+  border-bottom-left-radius: 1.25rem;
+  border-bottom-right-radius: 5.25rem;
   overflow: hidden;
 }
 .card__article {
@@ -268,7 +258,7 @@ body {
 }
 .card__img {
   position: relative;
-  width: 24rem;
+  width: 20rem;
   margin: 0 auto;
   z-index: 5;
 }
@@ -311,9 +301,10 @@ body {
 }
 .swiper-button-next,
 .swiper-button-prev {
+  display: none;
   width: initial;
   height: initial;
-  font-size: 3rem;
+  font-size: 0;
   color: var(--color-card-bg);
 }
 .swiper-button-prev {
@@ -322,21 +313,78 @@ body {
 .swiper-button-next {
   right: 0;
 }
-
+.box__dinamic {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  place-items: center;
+}
+.box__wrapper {
+  box-sizing: content-box;
+  flex-direction: column;
+  height: 5.7rem;
+  display: flex;
+  align-items: center;
+  padding: 50px 30px;
+  font-size: 2.5rem;
+  box-shadow: var(--shadow-box);
+  border-radius: 35px;
+}
+.word__static {
+  color: var(--color-second-text);
+  font-weight: 200;
+}
+.words__dinamic {
+  overflow: hidden;
+  height: 2.8rem;
+}
+.word__dinamic {
+  display: block;
+  padding-left: 15px;
+  color: var(--color-secondary);
+  animation: slide 6s infinite;
+}
+@keyframes slide {
+  10% {
+    transform: translateY(-112%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  35% {
+    transform: translateY(-212%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(-312%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  85% {
+    transform: translateY(-412%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}
 .contact {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
+  width: 85%;
   height: 100vh;
+  margin: 4rem auto;
 }
 .contact a {
   font-size: 3rem;
   width: 50px;
-  color: var(--color-text);
-  text-shadow: 0 0 0.2em var(--color-text);
+  color: var(--color-second-text);
+  text-shadow: 0 0 0.2em var(--color-second-text);
   transition: 0.3s;
 }
 .contact a:hover {
@@ -346,77 +394,53 @@ body {
   position: relative;
   display: flex;
   margin: 0 auto;
+  font-size: 1.2rem;
 }
 .copy-icon {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--color-second-text);
 }
 span {
   margin-left: 0.7rem;
 }
-
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+/* @media screen and (max-width: 900px) {
+  .nav-bar {
+    display: grid;
+    justify-items: center;
+  }
+  .home {
+    justify-content: center;
+  }
+  .description {
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+  }
 }
-.color-picker > fieldset {
-  border: 0;
-  display: flex;
-  gap: 2rem;
-  width: fit-content;
-  padding: 0 2rem;
-}
-.color-picker input[type='radio'] {
-  appearance: none;
-  width: 1rem;
-  height: 1rem;
-  outline: 3px solid var(--radio-color, currentColor);
-  outline-offset: 3px;
-  border-radius: 50%;
-}
-.color-picker input[type='radio']:checked {
-  background-color: var(--radio-color);
-}
-.color-picker input[type='radio']#light {
-  --radio-color: grey;
-  cursor: pointer;
-}
-.color-picker input[type='radio']#dark {
-  --radio-color: black;
-  cursor: pointer;
-}
-.color-picker input[type='radio']#blue {
-  --radio-color: blue;
-  cursor: pointer;
-}
-.color-picker input[type='radio']#pink {
-  --radio-color: pink;
-  cursor: pointer;
-}
-.color-picker input[type='radio']#green {
-  --radio-color: green;
-  cursor: pointer;
-}
-
-.flags__item {
-  cursor: pointer;
-}
-.flags__item > img {
-  border-radius: 25% 10px 25px;
-}
-
-/* @media screen and (max-width: 370px) {
+@media screen and (max-width: 600px) {
+  .nav-bar a {
+    font-size: small;
+  }
+  .logo {
+    display: none;
+  }
+  .name,
+  .rol {
+    text-wrap: wrap;
+  }
+  .description {
+    font-size: 1.3rem;
+    max-width: 370px;
+  }
+} */
+/* @media (max-width: 370px) {
   .card__container {
     margin-inline: 1rem;
   }
-}
+} */
+/*
 @media screen and (max-width: 500px) {
   .card__container {
     margin-inline: 0;
@@ -438,15 +462,7 @@ span {
   }
 }
 
-@media screen and (min-width: 370px) {
-  .nav-bar ul li {
-    font-size: 1.2rem;
-    padding: 0.7rem;
-  }
-  .text-container {
-    margin-bottom: 4rem;
-  }
-}
+
 @media screen and (min-width: 500px) {
   .nav-bar ul li {
     font-size: 1.6rem;

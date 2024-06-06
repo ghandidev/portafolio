@@ -86,3 +86,22 @@ const changeLanguage = async (language) => {
 flagsElement.addEventListener('click', (e) => {
   changeLanguage(e.target.getAttribute('data-language'));
 });
+
+const menuBtn = document.querySelector('.menu');
+const exitBtn = document.querySelector('.exit');
+const colorBar = document.querySelector('.page');
+const langBar = document.querySelector('.lang');
+
+menuBtn.addEventListener('click', () => {
+  colorBar.classList.remove('hide');
+  langBar.classList.remove('hide');
+  exitBtn.classList.remove('hide');
+  menuBtn.classList.add('hide');
+});
+
+exitBtn.addEventListener('click', () => {
+  menuBtn.classList.remove('hide');
+  exitBtn.classList.add('hide');
+  langBar.classList.add('hide');
+  colorBar.classList.add('hide');
+});

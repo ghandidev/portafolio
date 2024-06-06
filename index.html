@@ -13,10 +13,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
@@ -47,7 +43,21 @@
           </li>
         </ul>
       </nav>
-      <nav class="page">
+      <nav class="module">
+        <img
+          class="menu"
+          src="/assets/icons/menu.svg"
+          alt="icon menu"
+          width="24"
+        />
+        <img
+          class="exit hide"
+          src="/assets/icons/x.svg"
+          alt="icon exit"
+          width="24"
+        />
+      </nav>
+      <nav class="page hide">
         <ul>
           <li>
             <form class="color-picker" action="">
@@ -73,7 +83,7 @@
           </li>
         </ul>
       </nav>
-      <nav class="lang">
+      <nav class="lang hide">
         <ul id="flags">
           <li>
             <div class="flags__item">
@@ -259,41 +269,55 @@
         </div>
       </section>
       <section id="$contact" class="contact">
-        <a
-          id="profile-link"
-          href="https://github.com/ghandidev"
-          target="_blank"
-        >
-          <i class="bx bxl-github"></i>
-        </a>
-        <a href="https://www.facebook.com/aboultaifghandi" target="_blank">
-          <i class="bx bxl-meta"></i>
-        </a>
-        <a href="https://twitter.com/AboultaifG" target="_blank">
-          <i class="bx bxl-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/aboultaifghandi/" target="_blank">
-          <i class="bx bxl-instagram"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/ghandi-aboultaif-a02b47179/"
-          target="_blank"
-        >
-          <i class="bx bxl-linkedin-square"></i>
-        </a>
-        <a
-          href="https://wa.me/584123974500/?text=I'm%20need%20more%20information"
-          target="_blank"
-        >
-          <i class="bx bxl-whatsapp bx-tada"></i>
-        </a>
-        <a href="https://t.me/Ghandi88" target="_blank">
-          <i class="bx bxl-telegram"></i>
-        </a>
+        <div class="social">
+          <a href="https://github.com/ghandidev" target="_blank">
+            <img src="/assets/icons/github.svg" alt="logo Github" width="50" />
+          </a>
+          <a href="https://www.facebook.com/aboultaifghandi" target="_blank">
+            <img src="/assets/icons/meta.svg" alt="logo Meta" width="50" />
+          </a>
+          <a href="https://twitter.com/AboultaifG" target="_blank">
+            <img src="/assets/icons/twitterx.svg" alt="logo X" width="50" />
+          </a>
+          <a href="https://www.instagram.com/aboultaifghandi/" target="_blank">
+            <img
+              src="/assets/icons/instagram.svg"
+              alt="logo instagram"
+              width="50"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ghandi-aboultaif-a02b47179/"
+            target="_blank"
+          >
+            <img
+              src="/assets/icons/linkedin.svg"
+              alt="logo LinkedIn"
+              width="50"
+            />
+          </a>
+          <a
+            href="https://wa.me/584123974500/?text=I'm%20need%20more%20information"
+            target="_blank"
+          >
+            <img
+              src="/assets/icons/whatsapp.svg"
+              alt="logo Whatsapp"
+              width="50"
+            />
+          </a>
+          <a href="https://t.me/Ghandi88" target="_blank">
+            <img
+              src="/assets/icons/telegram.svg"
+              alt="logo Telegram"
+              width="50"
+            />
+          </a>
+        </div>
       </section>
       <div class="footer">
         <a class="copy-icon" href="#">
-          <i class="bx bx-copyright"></i>
+          <!-- <i class="bx bx-copyright"></i> -->
           <span> Copyright 2023</span>
         </a>
       </div>

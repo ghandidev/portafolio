@@ -1,7 +1,9 @@
 let swiperCards = new Swiper('.card__content', {
   loop: true,
-  spaceBetween: 32,
+  spaceBetween: 25,
   grabCursor: true,
+  centerSlide: 'true',
+  fade: 'true',
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -27,9 +29,6 @@ let menuBackdrop = document.querySelector('#menu-backdrop');
 listItem.forEach((item) => {
   item.addEventListener('mouseenter', () => {
     const { left, top, width, height } = item.getBoundingClientRect();
-    const { clientHeight, clientWidth } = item;
-    /* console.log(left, top, width, height);
-    console.log(clientHeight, clientWidth); */
 
     menuBackdrop.style.setProperty('--left', `${left}px`);
     menuBackdrop.style.setProperty('--top', `${top}px`);

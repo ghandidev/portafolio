@@ -324,6 +324,7 @@ body {
 }
 
 .swiper-navBtn {
+  display: none;
   color: var(--color-card-bg);
   transition: color 0.3s ease;
 }

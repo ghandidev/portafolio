@@ -203,16 +203,40 @@ body {
   width: 100%;
   height: 100vh;
 }
+.avatar {
+  margin-left: 1rem;
+  width: fit-content;
+  position: relative;
+  top: -0.5rem;
+}
+.avatar img {
+  border-radius: 50%;
+  width: 10rem;
+}
+.image-author {
+  width: 100%;
+}
+.bg-img {
+  position: absolute;
+  top: 2.5rem;
+  opacity: 0.3;
+  height: auto;
+  z-index: -10;
+}
+.bg-img img {
+  width: 100%;
+}
 .text-container {
   box-sizing: content-box;
   position: relative;
+  bottom: 3rem;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 .text-content {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0;
 }
 .name,
 .rol {
@@ -230,23 +254,12 @@ body {
 }
 .description {
   color: var(--color-second-text);
-  font-size: 1rem;
   text-align: center;
   background: var(--color-backdrop);
   opacity: 0.8;
   border-radius: 15px;
   padding: 5px;
-}
-.image-author {
-  position: absolute;
-  top: 5rem;
-  opacity: 0.3;
-  z-index: -10;
-}
-.image-author > .img {
-  width: 100%;
-  height: auto;
-  border-radius: 30px;
+  font-size: 0.9rem;
 }
 
 .container {
@@ -283,6 +296,7 @@ body {
 .card__img {
   position: relative;
   width: 20rem;
+  border-top-right-radius: 15px;
   margin: 0 auto;
   z-index: 5;
 }
@@ -348,6 +362,19 @@ body {
 .swiper-pagination-bullet-active {
   background-color: var(--color-card-bg);
 }
+
+#field {
+  height: 140px;
+  width: 100%;
+  border-bottom: 3px black groove;
+  position: relative;
+}
+
+#ball {
+  position: absolute;
+  cursor: pointer;
+}
+
 .box__dinamic {
   display: grid;
   width: 100%;
@@ -438,6 +465,88 @@ body {
 }
 span {
   margin-left: 0.7rem;
+}
+
+@media screen and (min-width: 370px) {
+  .avatar img {
+    transition: 0.3s;
+    width: 13rem;
+  }
+  .name,
+  .rol {
+    font-size: 2rem;
+  }
+  .card__img {
+    width: 22rem;
+  }
+}
+@media screen and (min-width: 390px) {
+  .avatar {
+    top: -2.5rem;
+  }
+  .text-content {
+    bottom: 3rem;
+  }
+  .description {
+    font-size: 1.1rem;
+  }
+  .card__img {
+    width: 23rem;
+  }
+}
+@media screen and (min-width: 412px) {
+  .card__img {
+    width: 25rem;
+  }
+  #ball {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .nav-bar ul li {
+    font-size: 18px;
+  }
+  .description {
+    font-size: 2rem;
+  }
+  .box__wrapper {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .nav-bar {
+    padding: 0.5rem 0;
+  }
+  .nav-bar ul li {
+    font-size: 22px;
+  }
+  .menu,
+  .exit {
+    display: none;
+  }
+  .page,
+  .lang,
+  .backdrop,
+  .swiper-navBtn {
+    display: block;
+  }
+  .bg-img {
+    top: 0;
+    width: 100%;
+  }
+  .avatar {
+    top: 9rem;
+    z-index: 12;
+  }
+  .avatar img {
+    width: 18rem;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-size: 60px;
+    font-weight: bold;
+  }
 }
 /* @media screen and (max-width: 900px) {
   .nav-bar {

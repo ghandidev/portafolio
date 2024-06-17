@@ -128,7 +128,6 @@ function quad(timeFraction) {
 ball.onclick = function () {
   let height = field.clientHeight - ball.clientHeight;
   let width = 250;
-
   animate({
     duration: 2000,
     timing: makeEaseOut(bounce),

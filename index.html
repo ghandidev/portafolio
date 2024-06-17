@@ -19,7 +19,7 @@
   </head>
   <body>
     <header class="nav-bar">
-      <nav>
+      <nav class="nav-main">
         <ul>
           <li>
             <a href="#$home">Home</a>
@@ -33,59 +33,35 @@
           <li>
             <a href="#$contact">Contact</a>
           </li>
-        </ul>
-      </nav>
-      <nav class="module">
-        <svg
-          class="menu"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          width="24"
-          height="24"
-          viewBox="0 0 50 50"
-        >
-          <path
-            d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"
-          ></path>
-        </svg>
-        <svg
-          class="exit hide"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          width="24"
-          height="24"
-          viewBox="0 0 50 50"
-        >
-          <path
-            d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"
-          ></path>
-        </svg>
-      </nav>
-      <nav class="page hide">
-        <ul>
           <li>
-            <form class="color-picker" action="">
-              <fieldset>
-                <legend class="visually-hidden">Pick a Color Scheme</legend>
-
-                <label for="light" class="visually-hidden">Light</label>
-                <input type="radio" name="theme" id="light" checked />
-
-                <label for="dark" class="visually-hidden">Dark</label>
-                <input type="radio" name="theme" id="dark" />
-
-                <label for="blue" class="visually-hidden">Blue</label>
-                <input type="radio" name="theme" id="blue" />
-
-                <label for="pink" class="visually-hidden">Pink</label>
-                <input type="radio" name="theme" id="pink" />
-
-                <label for="green" class="visually-hidden">Green</label>
-                <input type="radio" name="theme" id="green" />
-              </fieldset>
-            </form>
+            <svg
+              class="menu"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="24"
+              height="24"
+              viewBox="0 0 50 50"
+            >
+              <path
+                d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"
+              ></path>
+            </svg>
+          </li>
+          <li>
+            <svg
+              class="exit hide"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="24"
+              height="24"
+              viewBox="0 0 50 50"
+            >
+              <path
+                d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"
+              ></path>
+            </svg>
           </li>
         </ul>
       </nav>
@@ -120,6 +96,33 @@
           </li>
         </ul>
       </nav>
+      <nav class="page hide">
+        <ul>
+          <li>
+            <form class="color-picker" action="">
+              <fieldset>
+                <legend class="visually-hidden">Pick a Color Scheme</legend>
+
+                <label for="light" class="visually-hidden">Light</label>
+                <input type="radio" name="theme" id="light" checked />
+
+                <label for="dark" class="visually-hidden">Dark</label>
+                <input type="radio" name="theme" id="dark" />
+
+                <label for="blue" class="visually-hidden">Blue</label>
+                <input type="radio" name="theme" id="blue" />
+
+                <label for="pink" class="visually-hidden">Pink</label>
+                <input type="radio" name="theme" id="pink" />
+
+                <label for="green" class="visually-hidden">Green</label>
+                <input type="radio" name="theme" id="green" />
+              </fieldset>
+            </form>
+          </li>
+        </ul>
+      </nav>
+
       <div id="menu-backdrop" class="backdrop"></div>
     </header>
     <main class="main__container">
@@ -417,11 +420,8 @@
         </div>
       </section>
       <div class="footer">
-        ghandev
-        <a class="copy-icon" href="#">
-          <!-- <i class="bx bx-copyright"></i> -->
-          <span> Copyright 2023</span>
-        </a>
+        created by GHANDI ABOULTAIF
+        <a class="copy-icon" href="#"><span>Copyright © 2023</span></a>
       </div>
     </main>
     <script src="/js/swiper-bundle.min.js"></script>
